@@ -159,12 +159,12 @@ dotnet run
 ## Roadmap
 
 - [x] **Step 1** — HTF builder, C2/C3/C4 detection, FTMO risk guard, sizing, filters, base-rate statistics
-- [ ] Run the step-1 backtest on US100 (≥ 2 years) and decide go / no-go
-- [ ] **Step 2** — entry logic in `TryFindEntry`. Open decisions:
-  - Trigger: LTF CISD in the bias direction; require price in C2 discount/premium first?
-  - Stop: beyond the LTF swing that formed the CISD, or beyond the C2 extreme?
-  - Target: C2 opposite extreme, fixed 2R, or hold to the HTF candle close?
-  - Time exit: 14:00 ET (end of the window candle) or 15:50 ET?
+- [ ] Run the step-1 backtest on US100 (≥ 2 years) and decide go / no-go — [#1](../../issues/1)
+- [ ] **Step 2** — entry logic in `TryFindEntry`. Each open decision has its own issue, closed with the backtest evidence behind the choice:
+  - [ ] Entry trigger: LTF CISD, with or without a C2 discount/premium filter — [#2](../../issues/2)
+  - [ ] Stop: beyond the LTF swing, or beyond the C2 extreme — [#3](../../issues/3)
+  - [ ] Target: C2 opposite extreme, fixed R, or hold to the HTF close — [#4](../../issues/4)
+  - [ ] Time exit: 14:00 ET or 15:50 ET — [#5](../../issues/5)
 - [ ] Validate against a **random-direction benchmark** (same bracket, random side) — only the difference is the signal
 - [ ] Robustness on US500 and XAUUSD
 - [ ] Forward test on the FTMO Free Trial
