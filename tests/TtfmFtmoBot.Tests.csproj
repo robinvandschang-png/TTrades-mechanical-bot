@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Offline test harness: compiles the cBot against tests/CAlgoStub.cs (a minimal stand-in
+       for cTrader's cAlgo.API) and runs unit + end-to-end checks. Run from the repo root with: dotnet run (project: tests) -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <LangVersion>10.0</LangVersion>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <NoWarn>CS0649</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="../src/TtfmFtmoBot.cs" Link="TtfmFtmoBot.cs" />
+  </ItemGroup>
+</Project>
